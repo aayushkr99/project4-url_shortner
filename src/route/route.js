@@ -1,7 +1,9 @@
-const express = require('express');
-const router = express.Router();
 
-const urlController = require("../controller/urlController")
+const express = require('express');
+
+
+const urlController = require('../controller/urlController.js')
+const router = express.Router();
 
 router.post("/url/shorten", urlController.urlShort)
 router.get('/:urlCode', urlController.getUrlRedis )
